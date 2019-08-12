@@ -116,7 +116,6 @@ def music():
     pygame.mixer.music.set_volume(0.6*(volume1.musiclength/300))
     if not(pygame.mixer.music.get_busy()):
         musicdraw=ran.randint(0,7)
-        #checkdraw=[draw for draw,drawnum in enumerate(musicdrawed)if drawnum==musicdraw]
         if not(musicdraw in musicdrawed):
             pygame.mixer.music.load(musiclist[musicdraw])
             pygame.mixer.music.play(1)
@@ -2282,7 +2281,6 @@ while run:
                         
                     areset()
                     loading=True
-                    #battlerun=True
                     getidrun=True
             if mx>=swid/2-100 and mx <=swid/2-100+200:
                 if my >=shei/2-64 and my<=shei/2-64+50:
@@ -2536,8 +2534,6 @@ while run:
                     clicksound.play()
                     nameemptyshow=True
             
-                #if not(mx>=swid/2-90 and mx<=swid/2-90+180 and my>=shei/2 and my<=shei/2+60):
-                    #getinput=False
         if getinput:
             pygame.draw.rect(screen,(255,255,255),(swid/2-265,shei/2-190,530,70),0)
             showname=fontmedio.render(str(username),True,(0,0,0))
@@ -2730,7 +2726,6 @@ while run:
         pcx=p1.x+yrect.centerx
         fcx=f1.x+drect.centerx
 
-        #fsize=(f1.x+20,f1.y+20,drect.centerx*2-40,drect.centery*2-40)
             
         pickups()
         verysecretsecret()
