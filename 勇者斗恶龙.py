@@ -10,8 +10,7 @@ pygame.font.init()
 
 
 
-font= pygame.font.SysFont('Comic Sans MS',100)
-#font= pygame.font.Font('D:\OKGAME\Font1\dpcomic.ttf',100)
+font=pygame.font.SysFont('Comic Sans MS',100)
 fonts=pygame.font.SysFont('Comic Sans MS',99)
 fonthero=pygame.font.SysFont('Comic Sans MS',14)
 fontdragon=pygame.font.SysFont('Comic Sans MS',36)
@@ -68,12 +67,11 @@ version=fontok.render('Version 1.0.0.2',True,(255,255,255))
 
 
 
-  
+
 swid=1000
 shei=800
 
 screen=pygame.display.set_mode((swid,shei))
-#pygame.display.set_caption("勇者斗恶龙")
 pygame.display.set_caption("First Game!")
 
 lwall=100
@@ -84,32 +82,32 @@ r=255
 g=127
 b=0
 
-music1=r'C:\Program Files\First Game!\Music\Song1.mp3'
-music2=r'C:\Program Files\First Game!\Music\Song2.mp3'
-music3=r'C:\Program Files\First Game!\Music\Song3.mp3'
-music4=r'C:\Program Files\First Game!\Music\Song4.mp3'
-music5=r'C:\Program Files\First Game!\Music\Song5.mp3'
-music6=r'C:\Program Files\First Game!\Music\Song6.mp3'
-music7=r'C:\Program Files\First Game!\Music\Song7.mp3'
-music8=r'C:\Program Files\First Game!\Music\Song8.mp3'
+music1=r'/var/www/html/First Game!/Music/song1.mp3'
+music2=r'/var/www/html/First Game!/Music/song2.mp3'
+music3=r'/var/www/html/First Game!/Music/song3.mp3'
+music4=r'/var/www/html/First Game!/Music/song4.mp3'
+music5=r'/var/www/html/First Game!/Music/song5.mp3'
+music6=r'/var/www/html/First Game!/Music/song6.mp3'
+music7=r'/var/www/html/First Game!/Music/song7.mp3'
+music8=r'/var/www/html/First Game!/Music/song8.mp3'
 musiclist=[music1,music2,music3,music4,music5,music6,music7,music8]
 musicdraw=0
 musicdrawed=[]
 
-healsound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\Heal.wav')
-hitsoundweak=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\Weakhit.wav')
-hitsoundmedio=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\Hit.wav')
-hitsoundstrong=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\Stronghit.wav')
-burnsound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\Fire.wav')
-diesound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\Die.wav')
-buffsound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\Buff.wav')
-firesound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\Firestorm.wav')
-skillsound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\skill.wav')
-ultisound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\ulti.wav')
-boomsound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\explode.wav')
-attacksound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\shotgun.wav')
-startsound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\opening.wav')
-clicksound=pygame.mixer.Sound(r'C:\Program Files\First Game!\Sound\click.wav')
+healsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/heal.wav')
+hitsoundweak=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/weakhit.wav')
+hitsoundmedio=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/hit.wav')
+hitsoundstrong=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/stronghit.wav')
+burnsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/fire.wav')
+diesound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/die.wav')
+buffsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/buff.wav')
+firesound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/firestorm.wav')
+skillsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/skill.wav')
+ultisound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/ulti.wav')
+boomsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/explode.wav')
+attacksound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/shotgun.wav')
+startsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/opening.wav')
+clicksound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/click.wav')
 
 
 pygame.mouse.set_visible(False)
@@ -126,36 +124,36 @@ def music():
         if len(musicdrawed)>=8:
             musicdrawed.clear()
 
-dragon=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Dragon.PNG').convert_alpha()
+dragon=pygame.image.load(r'/var/www/html/First Game!/Sprite/dragon.png').convert_alpha()
 dragonf=pygame.transform.flip(dragon,True,False).convert_alpha()
 
-yuusha=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Yuusha.PNG').convert_alpha()
+yuusha=pygame.image.load(r'/var/www/html/First Game!/Sprite/yuusha.png').convert_alpha()
 
 yuushaf=pygame.transform.flip(yuusha,True,False).convert_alpha()
 
-bg=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Background.JPG').convert_alpha()
-heaven=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Heaven.JPG').convert_alpha()
-treasure=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Treasure.JPG').convert_alpha()
+bg=pygame.image.load(r'/var/www/html/First Game!/Sprite/background.jpg').convert_alpha()
+heaven=pygame.image.load(r'/var/www/html/First Game!/Sprite/heaven.jpg').convert_alpha()
+treasure=pygame.image.load(r'/var/www/html/First Game!/Sprite/treasure.jpg').convert_alpha()
 
-aim=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Aim.PNG').convert_alpha()
-
-
-fire=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Fireball.PNG').convert_alpha()
+aim=pygame.image.load(r'/var/www/html/First Game!/Sprite/aim.png').convert_alpha()
 
 
-tomb=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Tombstone.PNG').convert_alpha()
+fire=pygame.image.load(r'/var/www/html/First Game!/Sprite/fireball.png').convert_alpha()
 
-explode=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Boom.PNG').convert_alpha()
 
-sword=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Sword.PNG').convert_alpha()
+tomb=pygame.image.load(r'/var/www/html/First Game!/Sprite/tombstone.png').convert_alpha()
 
-shield=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Shield.PNG').convert_alpha()
+explode=pygame.image.load(r'/var/www/html/First Game!/Sprite/boom.png').convert_alpha()
 
-medkit=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Medkit.PNG').convert_alpha()
+sword=pygame.image.load(r'/var/www/html/First Game!/Sprite/sword.png').convert_alpha()
 
-note=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Note.PNG').convert_alpha()
+shield=pygame.image.load(r'/var/www/html/First Game!/Sprite/shield.png').convert_alpha()
 
-speaker=pygame.image.load(r'C:\Program Files\First Game!\Sprite\Speaker.PNG').convert_alpha()
+medkit=pygame.image.load(r'/var/www/html/First Game!/Sprite/medkit.png').convert_alpha()
+
+note=pygame.image.load(r'/var/www/html/First Game!/Sprite/note.png').convert_alpha()
+
+speaker=pygame.image.load(r'/var/www/html/First Game!/Sprite/speaker.png').convert_alpha()
 
 
 
@@ -2098,7 +2096,7 @@ number=0
 
 ranklist=[]
 try:
-    ranklist=pickle.load(open(r"C:\Program Files\First Game!\LeaderboardSave\LeaderboardSave.txt","rb"))
+    ranklist=pickle.load(open(r"/var/www/html/First Game!/LeaderboardSave/LeaderboardSave.txt","rb"))
 except:
     pass
 
@@ -2793,7 +2791,7 @@ while run:
             ddeadrun=True
             loading=True
 
-            pickle.dump(ranklist,open(r"C:\Program Files\First Game!\LeaderboardSave\LeaderboardSave.txt","wb"))
+            pickle.dump(ranklist,open(r"/var/www/html/First Game!/LeaderboardSave/LeaderboardSave.txt","wb"))
             
         if p1.die()==0:
             diesound.play()
