@@ -71,7 +71,7 @@ version=fontok.render('Version 1.0.0.2',True,(255,255,255))
 swid=1000
 shei=800
 
-screen=pygame.display.set_mode((swid,shei))
+#screen=pygame.display.set_mode((swid,shei))
 pygame.display.set_caption("First Game!")
 
 lwall=100
