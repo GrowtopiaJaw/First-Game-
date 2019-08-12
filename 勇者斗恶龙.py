@@ -4,8 +4,8 @@ import math as mt
 import pickle
 import datetime
 
-pygame.mixer.pre_init(44100, -16, 1, 512)
-pygame.mixer.init()
+#pygame.mixer.pre_init(44100, -16, 1, 512)
+#pygame.mixer.init()
 pygame.init()
 pygame.font.init()
 
@@ -83,46 +83,46 @@ r=255
 g=127
 b=0
 
-music1=r'/var/www/html/First Game!/Music/song1.mp3'
-music2=r'/var/www/html/First Game!/Music/song2.mp3'
-music3=r'/var/www/html/First Game!/Music/song3.mp3'
-music4=r'/var/www/html/First Game!/Music/song4.mp3'
-music5=r'/var/www/html/First Game!/Music/song5.mp3'
-music6=r'/var/www/html/First Game!/Music/song6.mp3'
-music7=r'/var/www/html/First Game!/Music/song7.mp3'
-music8=r'/var/www/html/First Game!/Music/song8.mp3'
-musiclist=[music1,music2,music3,music4,music5,music6,music7,music8]
-musicdraw=0
-musicdrawed=[]
+#music1=r'/var/www/html/First Game!/Music/song1.mp3'
+#music2=r'/var/www/html/First Game!/Music/song2.mp3'
+#music3=r'/var/www/html/First Game!/Music/song3.mp3'
+#music4=r'/var/www/html/First Game!/Music/song4.mp3'
+#music5=r'/var/www/html/First Game!/Music/song5.mp3'
+#music6=r'/var/www/html/First Game!/Music/song6.mp3'
+#music7=r'/var/www/html/First Game!/Music/song7.mp3'
+#music8=r'/var/www/html/First Game!/Music/song8.mp3'
+#musiclist=[music1,music2,music3,music4,music5,music6,music7,music8]
+#musicdraw=0
+#musicdrawed=[]
 
-healsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/heal.wav')
-hitsoundweak=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/weakhit.wav')
-hitsoundmedio=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/hit.wav')
-hitsoundstrong=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/stronghit.wav')
-burnsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/fire.wav')
-diesound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/die.wav')
-buffsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/buff.wav')
-firesound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/firestorm.wav')
-skillsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/skill.wav')
-ultisound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/ulti.wav')
-boomsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/explode.wav')
-attacksound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/shotgun.wav')
-startsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/opening.wav')
-clicksound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/click.wav')
+#healsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/heal.wav')
+#hitsoundweak=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/weakhit.wav')
+#hitsoundmedio=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/hit.wav')
+#hitsoundstrong=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/stronghit.wav')
+#burnsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/fire.wav')
+#diesound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/die.wav')
+#buffsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/buff.wav')
+#firesound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/firestorm.wav')
+#skillsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/skill.wav')
+#ultisound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/ulti.wav')
+#boomsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/explode.wav')
+#attacksound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/shotgun.wav')
+#startsound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/opening.wav')
+#clicksound=pygame.mixer.Sound(r'/var/www/html/First Game!/Sound/click.wav')
 
 
 pygame.mouse.set_visible(False)
-def music():
-    global musiclist,musicdraw,musicdrawed
-    pygame.mixer.music.set_volume(0.6*(volume1.musiclength/300))
-    if not(pygame.mixer.music.get_busy()):
-        musicdraw=ran.randint(0,7)
-        if not(musicdraw in musicdrawed):
-            pygame.mixer.music.load(musiclist[musicdraw])
-            pygame.mixer.music.play(1)
-            musicdrawed.append(musicdraw)
-        if len(musicdrawed)>=8:
-            musicdrawed.clear()
+#def music():
+#    global musiclist,musicdraw,musicdrawed
+#    pygame.mixer.music.set_volume(0.6*(volume1.musiclength/300))
+#    if not(pygame.mixer.music.get_busy()):
+#        musicdraw=ran.randint(0,7)
+#        if not(musicdraw in musicdrawed):
+#            pygame.mixer.music.load(musiclist[musicdraw])
+#            pygame.mixer.music.play(1)
+#            musicdrawed.append(musicdraw)
+#        if len(musicdrawed)>=8:
+#            musicdrawed.clear()
 
 dragon=pygame.image.load(r'/var/www/html/First Game!/Sprite/dragon.png').convert_alpha()
 dragonf=pygame.transform.flip(dragon,True,False).convert_alpha()
